@@ -1,170 +1,163 @@
-📊 Adidas Sales Data Analysis (PySpark + SparkSQL)
-📌 Project Overview
+# 📊 Adidas Sales Data Analysis (PySpark + SparkSQL)
 
-This project analyzes the Adidas sales dataset for the years 2020 and 2021 to uncover key business insights and trends that can help improve sales performance and optimize business strategies.
+## 📌 Project Overview
 
-The analysis was implemented using PySpark and Spark SQL inside a Databricks Notebook, where data transformation, aggregation, and visualization were performed.
+This project analyzes the **Adidas sales dataset for the years 2020 and 2021** to uncover key business insights and trends that help improve sales performance and support business decision-making.
 
-The goal of this project is to:
+The analysis was performed using **PySpark and Spark SQL in Databricks**, where data cleaning, transformation, aggregation, and visualization were implemented.
 
-Understand sales performance across different regions, products, and retailers.
+The main objective of this project is to:
 
-Identify trends and patterns in sales data.
+* Understand sales trends across different regions, states, and retailers
+* Identify high-performing products and cities
+* Analyze sales performance across time
+* Generate insights that support business strategy
 
-Provide insights that can help in data-driven decision making.
+---
 
-🎯 Business Objectives
+## 🎯 Business Requirements
 
 The following business metrics were analyzed:
 
-Total Sales
+1. Total Sales
+2. Total Profit
+3. Average Price per Unit
+4. Total Units Sold
+5. Total Sales by Month
+6. Total Sales by State
+7. Total Sales by Region
+8. Total Sales by Product
+9. Total Sales by Retailer
+10. Units Sold by Product Category and Gender
+11. Top Performing Cities by Profit
 
-Total Profit
+---
 
-Average Price per Unit
+## 🛠️ Technologies Used
 
-Total Units Sold
+* Python
+* Apache Spark
+* PySpark
+* Spark SQL
+* Databricks
+* Databricks Notebook Visualizations
 
-Total Sales by Month
+---
 
-Total Sales by State
+## 📂 Project Workflow
 
-Total Sales by Region
+### 1️⃣ Data Ingestion
 
-Total Sales by Product
+The Adidas sales dataset was loaded into Databricks.
 
-Total Sales by Retailer
+### 2️⃣ Data Cleaning & Transformation
 
-Units Sold by Product Category and Gender
+Using PySpark, several transformations were applied:
 
-Top Performing Cities by Profit
+* Handling missing values
+* Data type conversions
+* Currency conversion to INR
+* Creating derived columns such as:
 
-🛠️ Technologies Used
+  * `date_id`
+  * `month_name`
+  * `is_weekend`
+  * `region`
 
-🐍 Python
+### 3️⃣ Data Analysis
 
-⚡ Apache Spark
+Business metrics were calculated using **PySpark and Spark SQL**.
 
-🔥 PySpark
+### 4️⃣ Data Visualization
 
-🗄️ Spark SQL
+Interactive visualizations were created in the Databricks notebook to analyze:
 
-📊 Data Visualization (Databricks Notebook Charts)
+* Sales trends over time
+* Region-wise performance
+* Product sales distribution
+* Top performing cities by profit
 
-☁️ Databricks
+---
 
-📂 Project Workflow
+## 📊 Key Insights
 
-The project follows a typical data analytics pipeline:
+* Identified **top performing cities based on profit**
+* Observed **monthly sales trends**
+* Determined **high revenue generating products**
+* Analyzed **regional and state level sales performance**
+* Evaluated **retailer contribution to total sales**
 
-1️⃣ Data Ingestion
+---
 
-Raw Adidas sales dataset was loaded into Databricks.
+## 📁 Repository Structure
 
-2️⃣ Data Cleaning & Transformation
-
-Using PySpark, several transformations were applied such as:
-
-Handling null values
-
-Data type conversion
-
-Currency conversion to INR
-
-Creating additional columns like:
-
-month_name
-
-date_id
-
-is_weekend
-
-region mapping
-
-3️⃣ Data Analysis
-
-Using Spark SQL and PySpark, the dataset was aggregated to calculate key business metrics.
-
-4️⃣ Data Visualization
-
-Charts and visualizations were created inside the Databricks notebook to present insights such as:
-
-Sales trends by month
-
-Profit by city
-
-Sales distribution by region
-
-Product performance
-
-📊 Key Insights Generated
-
-Some of the important insights obtained from this analysis include:
-
-Identification of top-performing cities based on profit
-
-Analysis of sales trends across months
-
-Understanding which products generate the highest revenue
-
-Comparison of sales performance across regions and states
-
-Retailer-level sales contribution analysis
-
-📁 Repository Structure
+```
 Adidas-Sales-Analysis
 │
-├── adidas_sales_analysis.ipynb   # Databricks Notebook
+├── adidas_sales_analysis.ipynb   # Databricks Notebook containing PySpark analysis
 ├── dataset/                      # Adidas sales dataset
-├── images/                       # Visualizations
+├── images/                       # Visualization screenshots
 └── README.md                     # Project documentation
-▶️ How to Run the Project
+```
 
-Clone the repository
+---
 
+## ▶️ How to Run the Project
+
+### 1. Clone the repository
+
+```
 git clone https://github.com/your-username/adidas-sales-analysis.git
+```
 
-Open the notebook in Databricks
+### 2. Open the notebook in Databricks
 
-Upload the dataset.
+Upload the notebook to your Databricks workspace.
 
-Run the notebook cells to perform the analysis and generate visualizations.
+### 3. Upload the dataset
 
-📸 Sample Visualizations
+Place the dataset in your Databricks storage or workspace.
 
-Examples of charts generated in this project include:
+### 4. Run the notebook
 
-📈 Monthly Sales Trend
+Execute all cells to perform the data analysis and generate visualizations.
 
-🌍 Sales by Region
+---
 
-🏙️ Top Cities by Profit
+## 📸 Sample Visualizations
 
-👟 Sales by Product Category
+This project includes visualizations such as:
 
-💡 Learning Outcomes
+* Monthly Sales Trend
+* Sales by Region
+* Top Cities by Profit
+* Product Sales Analysis
+
+---
+
+## 💡 Learning Outcomes
 
 Through this project I gained practical experience in:
 
-Large-scale data processing using Apache Spark
+* Large scale data processing using Apache Spark
+* Data transformation using PySpark
+* Writing analytical queries using Spark SQL
+* Building end-to-end data analytics workflows
+* Creating visual insights for business analysis
 
-Data transformation with PySpark
+---
 
-Writing analytical queries using Spark SQL
+## 🚀 Future Improvements
 
-Building end-to-end data analysis pipelines
+Possible enhancements for this project:
 
-Creating visual insights for business decision making
+* Integrate Power BI dashboards
+* Build a complete Bronze → Silver → Gold data pipeline
+* Deploy the pipeline on cloud platforms like AWS or Azure
 
-🚀 Future Improvements
+---
 
-Integrate **Power BI for advanced dashboards
+## 👨‍💻 Author
 
-Implement ETL pipeline architecture (Bronze–Silver–Gold layers)
-
-Deploy the pipeline on cloud platforms like AWS or Azure
-
-👨‍💻 Author
-
-Sumran Harchirkar
+**Sumran Harchirkar**
 B.Tech – Artificial Intelligence & Data Science
